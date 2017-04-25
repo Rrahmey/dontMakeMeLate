@@ -8,24 +8,43 @@
 
 import UIKit
 
-class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
-    var age: Int = 0
+    var age = Int() {
+        didSet {
+            ageBool = true
+            canGoToNext()
+        }
+    }
     var feet: Int = 0
     var inch: Int = 0
-    var height: Int = 0
-    var weight: Double = 0
+    var height = Int() {
+        didSet {
+            heightBool = true
+            canGoToNext()
+        }
+    }
+    var weight = Int() {
+        didSet{
+            weightBool = true
+            canGoToNext()
+        }
+    }
     var gender: Gender = .female
     var pickerDataSource = [[String]]()
-
+    var ageBool = false
+    var heightBool = false
+    var weightBool = false
+    
     @IBOutlet weak var ageButton: UIButton!
     @IBOutlet weak var HeightButton: UIButton!
-    @IBOutlet weak var weightButton: UIButton!
+    @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var genderSC: UISegmentedControl!
     @IBOutlet weak var agePicker: UIDatePicker!
     @IBOutlet weak var enterPickerButton: UIButton!
     @IBOutlet weak var enterHeightButton: UIButton!
     @IBOutlet weak var heightPicker: UIPickerView!
+    @IBOutlet weak var nextPageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +54,11 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
         enterPickerButton.isHidden = true
         heightPicker.isHidden = true
         enterHeightButton.isHidden = true
+        weightTextField.delegate = self
+        setUpWeightTextField()
+        nextPageButton.isHidden = true
     }
-
+    
     @IBAction func ageButtonPressed(_ sender: Any) {
         heightPicker.isHidden = true
         enterHeightButton.isHidden = true
@@ -47,7 +69,7 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBAction func enterButtonPressed(_ sender: Any) {
         enterPickerButton.isHidden = true
         currentAge()
-            }
+    }
     
     @IBAction func heightButtonPressed(_ sender: Any) {
         agePicker.isHidden = true
@@ -72,10 +94,11 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
             } else if personAge < 10 {
                 self.ageButton.setTitle("Must be at least 10", for: .normal)
                 self.ageButton.setTitleColor(UIColor.red, for: .normal)
-
+                
             } else {
-            self.ageButton.setTitle(String(personAge), for: .normal)
+                self.ageButton.setTitle(String(personAge), for: .normal)
                 self.age = personAge
+                self.enterPickerButton.isHidden = true
             }
         }, completion: nil)
     }
@@ -124,7 +147,7 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
             let foot = pickerDataSource[component][row]
             let feetShort = foot.substring(to: foot.index(before: foot.endIndex))
             feet = Int(feetShort)!
-
+            
         } else if component == 1 {
             let inches = pickerDataSource[component][row]
             let inchShort = inches.substring(to: inches.index(before: inches.endIndex))
@@ -132,9 +155,34 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
-
+    func setUpWeightTextField() {
+        
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if weightTextField.text == "" {
+            weightTextField.text = "Weight"
+        } else {
+            guard let weightText = weightTextField.text else {return}
+            weightTextField.text = weightText + " lbs"
+            weight = Int(weightText)!
+        }
+        self.view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        weightTextField.text = ""
+        weightTextField.keyboardType = UIKeyboardType.decimalPad
+        
+    }
+    
+    func canGoToNext() {
+        if ageBool == true && heightBool == true && weightBool == true {
+            UIView.animate(withDuration: 1.0, delay: 0, options: .autoreverse, animations: {
+                self.nextPageButton.isHidden = false
+            }, completion: nil )
+        }
+    }
     
     
-
-
 }
