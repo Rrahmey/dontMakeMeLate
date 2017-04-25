@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjR-R2-Kf8">
-                                <rect key="frame" x="150" y="109" width="75" height="44"/>
+                                <rect key="frame" x="1" y="86" width="374" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
@@ -43,6 +43,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="heightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcz-9B-4QQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0d-cf-bdM">
                                 <rect key="frame" x="138" y="241" width="100" height="53"/>
@@ -73,10 +76,6 @@
                                     <!--2017-04-24 20:57:05 +0000-->
                                 </date>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-fZ-v4H" userLabel="Body Picker">
-                                <rect key="frame" x="0.0" y="414" width="375" height="183"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3K-zt-Pvi">
                                 <rect key="frame" x="140" y="598" width="95" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,7 +85,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="enterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YRh-Ij-TfA"/>
+                                    <action selector="enterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OpP-7T-9cY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill out the information below, and let's get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0Y-vb-2d0">
@@ -96,6 +95,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mn7-ox-K4L">
+                                <rect key="frame" x="56" y="414" width="262" height="183"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-G4-Lai">
+                                <rect key="frame" x="140" y="598" width="95" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <size key="titleShadowOffset" width="2" height="1"/>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterHeightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQT-Iy-oyH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98319822549819946" green="0.98879045248031616" blue="0.96228808164596558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -103,9 +118,10 @@
                         <outlet property="HeightButton" destination="L2x-n5-nze" id="uuc-5Q-u7d"/>
                         <outlet property="ageButton" destination="IjR-R2-Kf8" id="nM0-Hu-sxt"/>
                         <outlet property="agePicker" destination="nox-GI-XOx" id="O1K-Rn-CVP"/>
-                        <outlet property="bodyMesPicker" destination="UjV-fZ-v4H" id="3C7-EX-HX4"/>
-                        <outlet property="enterPickerButton" destination="U3K-zt-Pvi" id="sdx-7e-Uds"/>
+                        <outlet property="enterHeightButton" destination="ejg-G4-Lai" id="UrO-vh-XBC"/>
+                        <outlet property="enterPickerButton" destination="U3K-zt-Pvi" id="n9W-S6-xxq"/>
                         <outlet property="genderSC" destination="3ah-Kt-EB2" id="Agz-Mq-R91"/>
+                        <outlet property="heightPicker" destination="mn7-ox-K4L" id="bk4-Do-bDe"/>
                         <outlet property="weightButton" destination="o0d-cf-bdM" id="7DQ-EC-Ckf"/>
                     </connections>
                 </viewController>

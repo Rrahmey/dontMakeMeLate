@@ -57,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				D32F4DA91EAE967000B78B2F /* AppDelegate.swift */,
+				D376478D1EAFD81C008769AB /* Views */,
 				D32F4DBC1EAE989E00B78B2F /* Models */,
 				D32F4DBB1EAE988E00B78B2F /* Controllers */,
 				D32F4DAD1EAE967000B78B2F /* Main.storyboard */,
@@ -81,6 +82,13 @@
 				D32F4DBD1EAE9EB900B78B2F /* UserModel.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D376478D1EAFD81C008769AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +330,7 @@
 				D32F4DBA1EAE967000B78B2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
