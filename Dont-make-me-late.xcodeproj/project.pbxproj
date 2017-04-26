@@ -13,6 +13,7 @@
 		D32F4DB41EAE967000B78B2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32F4DB21EAE967000B78B2F /* LaunchScreen.storyboard */; };
 		D32F4DBE1EAE9EB900B78B2F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F4DBD1EAE9EB900B78B2F /* UserModel.swift */; };
 		D32F4DC01EAEA15900B78B2F /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F4DBF1EAEA15900B78B2F /* GetStartedViewController.swift */; };
+		D37647911EB0F4B4008769AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37647901EB0F4B4008769AB /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D32F4DB51EAE967000B78B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D32F4DBD1EAE9EB900B78B2F /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D32F4DBF1EAEA15900B78B2F /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		D37647901EB0F4B4008769AB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D32F4DBF1EAEA15900B78B2F /* GetStartedViewController.swift */,
+				D37647901EB0F4B4008769AB /* HomeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D37647911EB0F4B4008769AB /* HomeViewController.swift in Sources */,
 				D32F4DC01EAEA15900B78B2F /* GetStartedViewController.swift in Sources */,
 				D32F4DBE1EAE9EB900B78B2F /* UserModel.swift in Sources */,
 				D32F4DAA1EAE967000B78B2F /* AppDelegate.swift in Sources */,

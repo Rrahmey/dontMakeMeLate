@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Get Started View Controller-->
+        <!--Let's Get Started!-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GetStartedViewController" customModule="Dont_make_me_late" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,27 +21,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="02cef6d752178e33a593a9fa348e6f5c" translatesAutoresizingMaskIntoConstraints="NO" id="IfJ-UF-KLu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1094"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjR-R2-Kf8">
                                 <rect key="frame" x="1" y="86" width="374" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Age">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.94135171175003052" green="0.73909622430801392" blue="0.89974212646484375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="ageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mg6-W5-IAJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2x-n5-nze">
-                                <rect key="frame" x="141" y="168" width="94" height="53"/>
+                                <rect key="frame" x="134" y="167" width="107" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Height">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.94135171175003052" green="0.73909622430801392" blue="0.89974212646484375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="heightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcz-9B-4QQ"/>
@@ -50,6 +52,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-Kt-EB2">
                                 <rect key="frame" x="112" y="332" width="152" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98319822550000002" green="0.98879045249999997" blue="0.96228808160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Female"/>
                                     <segment title="Male"/>
@@ -64,35 +67,36 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3K-zt-Pvi">
-                                <rect key="frame" x="140" y="598" width="95" height="53"/>
+                                <rect key="frame" x="134" y="598" width="101" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
                                 <state key="normal" title="ENTER">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.93955814838409424" green="0.75100249052047729" blue="0.94145756959915161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="enterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OpP-7T-9cY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill out the information below, and let's get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0Y-vb-2d0">
-                                <rect key="frame" x="40" y="20" width="294" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Get Started!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0Y-vb-2d0">
+                                <rect key="frame" x="-25" y="38" width="427" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="0.98319822550000002" green="0.98879045249999997" blue="0.96228808160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mn7-ox-K4L">
+                            <pickerView alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mn7-ox-K4L">
                                 <rect key="frame" x="56" y="414" width="262" height="183"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98319822550000002" green="0.98879045249999997" blue="0.96228808160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-G4-Lai">
-                                <rect key="frame" x="140" y="598" width="95" height="53"/>
+                                <rect key="frame" x="130" y="598" width="108" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
                                 <state key="normal" title="ENTER">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.93955814838409424" green="0.75100249052047729" blue="0.94145756959915161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="enterHeightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQT-Iy-oyH"/>
@@ -101,39 +105,63 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ag-tB-AJd">
                                 <rect key="frame" x="127" y="256" width="121" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.94135171175003052" green="0.73909622430801392" blue="0.89974212646484375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="8bC-Xf-vdC" id="ZMo-pc-nG0"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQG-Ad-QVv">
-                                <rect key="frame" x="272" y="304" width="143" height="85"/>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjd-Qn-TCq">
+                                <rect key="frame" x="278" y="300" width="98" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="RightArrow"/>
+                                <state key="normal" backgroundImage="Right Aroorw"/>
+                                <connections>
+                                    <action selector="getStartedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29L-87-XLl"/>
+                                    <segue destination="YdC-lf-8Mn" kind="presentation" id="eWX-P6-bpl"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.98319822549819946" green="0.98879045248031616" blue="0.96228808164596558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Let's Get Started!" id="m3j-90-tB2"/>
                     <connections>
                         <outlet property="HeightButton" destination="L2x-n5-nze" id="uuc-5Q-u7d"/>
                         <outlet property="ageButton" destination="IjR-R2-Kf8" id="nM0-Hu-sxt"/>
                         <outlet property="agePicker" destination="nox-GI-XOx" id="O1K-Rn-CVP"/>
+                        <outlet property="backgroundImage" destination="IfJ-UF-KLu" id="Yb5-IX-jS8"/>
                         <outlet property="enterHeightButton" destination="ejg-G4-Lai" id="UrO-vh-XBC"/>
                         <outlet property="enterPickerButton" destination="U3K-zt-Pvi" id="n9W-S6-xxq"/>
                         <outlet property="genderSC" destination="3ah-Kt-EB2" id="Agz-Mq-R91"/>
                         <outlet property="heightPicker" destination="mn7-ox-K4L" id="bk4-Do-bDe"/>
-                        <outlet property="nextPageButton" destination="zQG-Ad-QVv" id="WdQ-bT-ikt"/>
+                        <outlet property="nextPageButton" destination="hjd-Qn-TCq" id="hMA-J1-yrV"/>
                         <outlet property="weightTextField" destination="4ag-tB-AJd" id="vt9-MH-1zT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2015.2" y="138.98050974512745"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="j9B-oC-VA1">
+            <objects>
+                <viewController id="YdC-lf-8Mn" customClass="HomeViewController" customModule="Dont_make_me_late" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FxU-tZ-oxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="4od-b8-mu1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qac-jU-d1b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94135171175003052" green="0.73909622430801392" blue="0.89974212646484375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ois-Iv-YIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2737" y="139"/>
         </scene>
     </scenes>
     <resources>
-        <image name="RightArrow" width="104" height="104"/>
+        <image name="02cef6d752178e33a593a9fa348e6f5c" width="570" height="1014"/>
+        <image name="Right Aroorw" width="1024" height="612"/>
     </resources>
 </document>

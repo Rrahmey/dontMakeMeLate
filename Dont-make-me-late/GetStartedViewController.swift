@@ -36,6 +36,7 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var heightBool = false
     var weightBool = false
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var ageButton: UIButton!
     @IBOutlet weak var HeightButton: UIButton!
     @IBOutlet weak var weightTextField: UITextField!
@@ -48,15 +49,28 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        agePicker.isHidden = true
-        agePicker.datePickerMode = UIDatePickerMode.date
-        agePicker.maximumDate = Date()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        setUpDatePicker()
         enterPickerButton.isHidden = true
         heightPicker.isHidden = true
         enterHeightButton.isHidden = true
         weightTextField.delegate = self
-        setUpWeightTextField()
         nextPageButton.isHidden = true
+        backgroundImage.alpha = 0.7
+    }
+    
+    func setUpDatePicker() {
+        agePicker.isHidden = true
+        agePicker.datePickerMode = UIDatePickerMode.date
+        agePicker.maximumDate = Date()
+        let dateString = "Jan 1 2000"
+        let df = DateFormatter()
+        df.dateFormat = "MM dd yyyy"
+        let date = df.date(from: dateString)
+        if let unwrappedDate = date {
+            agePicker.setDate(unwrappedDate, animated: false)
+        }
     }
     
     @IBAction func ageButtonPressed(_ sender: Any) {
@@ -64,6 +78,8 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
         enterHeightButton.isHidden = true
         agePicker.isHidden = false
         enterPickerButton.isHidden = false
+        agePicker.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        weightTextField.endEditing(true)
     }
     
     @IBAction func enterButtonPressed(_ sender: Any) {
@@ -76,6 +92,7 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
         enterPickerButton.isHidden = true
         setUpHeightPicker()
         enterHeightButton.isHidden = false
+        weightTextField.endEditing(true)
     }
     
     
@@ -155,34 +172,53 @@ class GetStartedViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
-    func setUpWeightTextField() {
-        
-        
-    }
+   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if weightTextField.text == "" {
             weightTextField.text = "Weight"
-        } else {
+            return
+        } else if weightTextField.text != "Weight"{
             guard let weightText = weightTextField.text else {return}
             weightTextField.text = weightText + " lbs"
             weight = Int(weightText)!
         }
         self.view.endEditing(true)
+        self.agePicker.isHidden = true
+        self.heightPicker.isHidden = true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        enterPickerButton.isHidden = true
+        enterHeightButton.isHidden = true
+        agePicker.isHidden = true
+        heightPicker.isHidden = true
         weightTextField.text = ""
-        weightTextField.keyboardType = UIKeyboardType.decimalPad
+        weightTextField.keyboardType = UIKeyboardType.numberPad
         
     }
     
     func canGoToNext() {
         if ageBool == true && heightBool == true && weightBool == true {
-            UIView.animate(withDuration: 1.0, delay: 0, options: .autoreverse, animations: {
+            print("just entered here")
+            nextPageButton.isHidden = false 
+            UIView.animate(withDuration: 2.0, delay: 1.0, options: [.autoreverse, .curveEaseIn], animations: {
                 self.nextPageButton.isHidden = false
+                                
             }, completion: nil )
+        } else {
+            print("not yet")
         }
     }
     
+    @IBAction func getStartedButtonPressed(_ sender: Any) {
+        if genderSC.selectedSegmentIndex == 0 {
+            print(genderSC.selectedSegmentIndex)
+            gender = .female
+        } else if genderSC.selectedSegmentIndex == 1 {
+            print(genderSC.selectedSegmentIndex)
+            gender = .male
+        }
+     
+    }
     
 }

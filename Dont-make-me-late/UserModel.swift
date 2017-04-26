@@ -9,12 +9,12 @@
 import Foundation
 
 class User {
-    var age: Double
-    var weight: Double
-    var height: Double
+    var age: Int
+    var weight: Int
+    var height: Int
     var gender: Gender
     
-    init(age: Double, weight: Double, height: Double, gender: Gender) {
+    init(age: Int, weight: Int, height: Int, gender: Gender) {
         self.age = age
         self.weight = weight
         self.height = height
